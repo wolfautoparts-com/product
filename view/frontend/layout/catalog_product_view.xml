@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="product.info.details">
+                <!--<block class="Magento\Catalog\Block\Product\View" name="fitment.tab"
+                       template="Wolf_Product::fitmentChart.phtml" group="detailed_info">
+                    <arguments>
+                        <argument name="title" translate="true" xsi:type="string">Does it fit my car?</argument>
+                    </arguments>
+                </block>
+                <block class="Magento\Catalog\Block\Product\View" name="returns.tab"
+                       template="Wolf_Product::returns.phtml" group="detailed_info">
+                    <arguments>
+                        <argument name="title" translate="true" xsi:type="string">Returns</argument>
+                    </arguments>
+                </block>-->
+                <block class="Magento\Catalog\Block\Product\View" name="warranty.tab"
+                       template="Wolf_Product::warranty.phtml" group="detailed_info">
+                    <arguments>
+                        <argument name="title" translate="true" xsi:type="string">Warranty</argument>
+						<argument name="sort_order" xsi:type="string">21</argument>
+                    </arguments>
+                </block>
+        </referenceBlock>
+		
+		<referenceContainer name="content">
+		    <container name="product.part.fitment.info" htmlTag="div" htmlClass="product info detailed" before="product.info.details">
+               <block class="Magento\Catalog\Block\Product\View" name="fitment.info" template="Wolf_Product::product/view/fitment_chart.phtml" />			  
+            </container>
+		</referenceContainer>
+    </body>
+</page>

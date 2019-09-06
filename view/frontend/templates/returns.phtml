@@ -1,0 +1,22 @@
+<?php
+
+$product = $block->getProduct();
+
+$returns = $product->getData('returns');
+
+if(!empty($returns)) {
+
+    // Product has specific returns information
+
+    echo $returns;
+
+
+} else {
+
+    // Generic fitment_chart information
+    ?>
+    <p>Returns</p>
+    <p>Edit at ./app/code/Wolf/Product/view/frontend/templates/returns.phtml</p>
+    <?php
+
+}

@@ -1,0 +1,17 @@
+<?php
+
+$product = $block->getProduct();
+
+$fitmentChart = $product->getData('fitment_chart');
+
+if(!empty($fitmentChart)) {
+    echo $fitmentChart;
+} else {
+
+    // Generic fitment_chart information
+    ?>
+    <p>Fitment Chart</p>
+    <p>Edit at ./app/code/Wolf/Product/view/frontend/templates/fitmentChart.phtml</p>
+    <?php
+
+}

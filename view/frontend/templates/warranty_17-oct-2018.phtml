@@ -1,0 +1,22 @@
+<?php
+
+$product = $block->getProduct();
+
+$warranty = $product->getData('warranty');
+
+if(!empty($warranty)) {
+
+    // Product has specific returns information
+
+    echo $warranty;
+
+
+} else {
+
+    // Generic fitment_chart information
+    ?>
+    <p>Warranty</p>
+    <p>Edit at ./app/code/Wolf/Product/view/frontend/templates/warranty.phtml</p>
+    <?php
+
+}

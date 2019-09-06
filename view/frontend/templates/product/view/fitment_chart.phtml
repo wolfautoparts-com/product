@@ -1,0 +1,11 @@
+<?php
+
+$product = $block->getProduct();
+
+$fitmentChart = $product->getData('fitment_chart');
+?>
+
+<?php if(!empty($fitmentChart)): ?>	
+	   <h3 style="color: #000011; font-weight: 600; text-decoration: underline;"><?php echo __('Part Fitment'); ?></h3>
+	   <?php echo $fitmentChart; ?>
+<?php endif; ?>
