@@ -8,7 +8,7 @@ $attribute = $product->getResource()->getAttribute('warranty');
 //if ($attribute->usesSource()) {
     $optionText = $attribute->getSource()->getOptionText($warranty);
 //}
-if(!empty($warranty) && !empty($optionText)) {
+if (!empty($warranty) && !empty($optionText)) {
 
     // Product has specific returns information
 	echo $optionText;
