@@ -29,7 +29,9 @@ bin/magento cache:enable
 bin/magento maintenance:enable
 rm -rf composer.lock
 composer clear-cache
-composer update wolfautoparts.com/product
+composer remove wolfautoparts.com/product
+composer clear-cache
+composer require wolfautoparts.com/product:*
 /usr/share/stratus/cli cache.all.clear
 bin/magento setup:upgrade
 rm -rf var/di var/generation generated/code && bin/magento setup:di:compile
